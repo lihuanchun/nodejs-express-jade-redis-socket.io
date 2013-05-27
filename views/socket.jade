@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    script(src='/javascripts/socket.io.min.js')
+    script(src='/javascripts/socket.js')
+    br
+    br
+    p(id='p')
+    br
+    input(type='text',name='msgTxt')
+    input(type='button',id='toMsg',value='发送消息')
+

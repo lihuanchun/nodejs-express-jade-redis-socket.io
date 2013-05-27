@@ -1,0 +1,30 @@
+doctype 5
+html
+    head
+        meta(charset='utf-8')
+        title= title
+        link(rel='stylesheet', href='/stylesheets/style.css')
+        script(src='/javascripts/jquery.min.1.4.js')
+        script(src='/javascripts/jquery.cookie.js')
+        script(src='/javascripts/main.js')
+
+    body
+        h1= 'nodejs+express+jade+redis+socket.io'
+
+
+        if(userdata!=undefined)
+            span='欢迎:'
+            span #{userdata.name}
+            span='   '
+            a(href='/logout' ) 退出
+        else
+            a(href='/regist' ) 用户注册
+            span='   '
+            a(href='/login' ) 用户登录
+        span='   '
+        a(href='/socket' ) Socket.io测试
+        span='   '
+        a(href='/game' ) 游戏
+        span='   '
+        block content
+

@@ -1,0 +1,49 @@
+extends layout
+
+block content
+    p 当前页面 >> #{title}
+    if (show)
+        p(id='show') 提示信息: #{show}
+
+    form(action='/regist',method='post',id='registForm')
+        input(type='hidden',name='action',value='registing')
+        table
+            tr
+                td
+                    span 用户名
+                td
+                    input(type='text',name='name')
+            tr
+                td
+                    span 邮箱地址
+                td
+                    input(type='text',name='mail')
+            tr
+                td
+                    span 密码
+                td
+                    input(type='password',name='password')
+            tr
+                td
+                    span 重复密码
+                td
+                    input(type='password',name='password_')
+            tr
+                td
+                    span 性别
+                td
+                    span 男
+                    input(type='radio',name='sex',value='1', checked)
+                    span 女
+                    input(type='radio',name='sex',value='0')
+            tr
+                td
+                    span 年龄
+                td
+                    input(type='text',name='age',size=2)
+        br
+        input(type='button',id='registSubmit',value='注册')
+
+
+
+

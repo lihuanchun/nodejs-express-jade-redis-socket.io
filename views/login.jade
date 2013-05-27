@@ -1,0 +1,18 @@
+extends layout
+
+block content
+    p 当前页面 >> #{title}
+
+    table
+        tr
+            td
+                注册/邮箱
+            td
+                input(type='text',name='name_or_mail')
+        tr
+            td
+                密码
+            td
+                input(type='password',name='password')
+
+    input(type='button',id='buttonlogin',value='登录')
